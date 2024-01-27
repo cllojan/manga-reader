@@ -1,2 +1,201 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    min-height: 100vh;
+}
+.container{
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:3rem;
+    font-family: 'Overpass', sans-serif;
+}
+/* CSS de los inputs y filters */
+.inputs_container {
+    font-family: 'Overpass', sans-serif;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+#search{
+    
+    background-color: #151f2e;
+    width:300px;
+    height:40px;
+    padding-left:10px;
+    border:2px solid #17202A;
+    border-radius: 7px;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    color:#8BA0B2;
+}
+#search::placeholder{
+    color:#8BA0B2;
+}
+#search::-ms-input-placeholder{    
+    font-family: 'Overpass', sans-serif;
+}
+#search:focus{
+    outline: none;
+    border:2px solid #1B4F72 ;
+}
+.select{
+    position: relative;
+    width: 200px;
+    height:40px;
+}
+.select::before{
+    content:"";
+    position: absolute;
+    right: 20px;
+    top: 11px;
+    z-index: 300;
+    cursor: pointer;
+    pointer-events: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 3px;
+    border: 2px solid #8BA0B2;
+    border-top:2px solid #151f2e;
+    border-right: 2px solid #151f2e;
+    transform: rotate(-45deg);
+    transition: 0.5s ease;
+}
+.select input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: #151f2e;
+    border: none;
+    border:2px solid #17202A;
+    border-radius: 7px;
+    outline: none;
+    padding-left: 10px;
+    color:#8BA0B2;
+}
+.select input:focus{
+    outline: none;
+    border:2px solid #1B4F72 ;
+}
+.select input::placeholder{
+    color:#8BA0B2;
+    font-weight: 600;
+    font-family: 'Overpass', sans-serif;
+}
+.option{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #151f2e;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 200;
+    color:#8BA0B2;
+    visibility: hidden;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#genders:focus + .option{
+    
+    visibility: visible;
+}
+
+.option div{
+    background-color: #151f2e;
+    padding: 10px 8px;
+    cursor: pointer;
+}
+.option div:hover{
+    background-color: #0B1622;
+    
+}
+
+
+
+
+
+
+/* Contenedor de los mangas */
+.mangas_container{
+    padding:0 6rem;
+    width: 100%;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-gap:2rem;    
+}
+
+.item{
+    width: 200px;
+    display: grid;
+    grid-template-rows: min-content auto;
+    position: relative;    
+    text-decoration: none;
+    color:#fff;
+    h1{
+        padding-top:16px;
+        font-size: 16px;
+        font-weight: bold;
+        color:#8bA0B2;
+    }
+    p{
+        
+        font-size: 14px;
+        font-weight: 500;
+        color:#5b6b7b;
+    }
+}
+.image_container{
+    height: 265px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    z-index: 5;
+    
+}
+.image{
+    position: absolute;
+    height: 100%;
+    left:0;
+    top: 0;
+    object-fit: cover;
+    width: 100%;   
+    
+}
+@media (max-width:1540px){
+    .mangas_container{
+        gap:25px 20px;
+    }
+}
+
+@media (max-width:1040px){
+    
+    .mangas_container{
+        
+        padding: 0 20px;
+        grid-template-columns: repeat(auto-fill,minmax(150px, 1fr));
+        gap:25px 20px;
+        justify-content: center;
+
+    }
+    .item{
+        width: 100%;
+    }
+    
+}
+@media(max-width:760px){
+    .mangas_container{
+        
+        gap:23px 20px;
+    }
+}
 

@@ -2,11 +2,11 @@
 function MangaItem() {
     return (
         <a className="item" href="#">
-            <div className="item_container">
-                <div id="itemImage" className="item_image"></div>
-                <h1 className="item_title" >House</h1>
-                <p className="item_text"><span>Show</span><span><span >●</span>2004</span></p>
+            <div className="image_container">
+                <img className="image" src="https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30013-tZVlfBCHbrNL.jpg" alt="uwu" srcSet=""/>
             </div>            
+            <h1 className="item_title" >One Piece</h1>
+            <p className="item_text"><span>Manga</span></p>
         </a>
     )
 }

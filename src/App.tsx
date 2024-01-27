@@ -2,19 +2,40 @@ import { useState } from 'react'
 //import reactLogo from './assets/react.svg'
 //import viteLogo from '/vite.svg'
 import './App.css'
-import {Button} from "@nextui-org/react";
+
 import MangaItem from "./Components/MangaItem";
+
 function App() {
 
 	return (
 
 		<>
-			<div>
-				<div>
-					<input />
-          <Button color="primary">aaaButton</Button>
+			<main className='container'>
+				<div className="inputs_container">
+					<input type="text" id="search" placeholder='Buscar manga'/>					
+					<div className="select" >
+						<input type="text" className='textBox' id="genders" placeholder='Generos'/>
+						<div className="option">
+							<div className="">Accion</div>
+							<div className="">Aventura</div>
+						</div>
+					</div>					
+					<div className="select" >
+						<input type="text" className='textBox' id="genders" placeholder='Generos'/>
+						<div className="option">
+							<div className="">Accion</div>
+							<div className="">Aventura</div>
+						</div>
+					</div>	
+					<div className="select" >
+						<input type="text" className='textBox' id="genders" placeholder='Generos'/>
+						<div className="option">
+							<div className="">Accion</div>
+							<div className="">Aventura</div>
+						</div>
+					</div>	
 				</div>
-				<div className='mangas__container'>
+				<div className='mangas_container'>
 					<MangaItem />
 					<MangaItem />
 					<MangaItem />
@@ -22,11 +43,9 @@ function App() {
 					<MangaItem />
 					<MangaItem />
 					<MangaItem />
-					<MangaItem />
-					
+					<MangaItem />					
 				</div>
-
-			</div>
+			</main>
 		</>
 	)
 }
